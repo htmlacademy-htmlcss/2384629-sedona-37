@@ -55,6 +55,7 @@
               <a class="breadcrumbs-link" href="catalog.html">Каталог</a>
             </li>
           </ul>
+        </header>
 
           <section class="catalog-products">
             <h2 class="visually-hidden">Список товаров с фильтрами</h2>
@@ -109,16 +110,16 @@
                   </fieldset>
                 </div>
 
-                <div class="filter-right-side">
-                  <fieldset class="catalog-filter-group">
+                  <form class="price-filter" action="https://echo.htmlacademy.ru/" method="get">
                     <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-                  </fieldset>
-
-                  <fieldset class="catalog-filter-group">
-                    <button class="catalog-filter-button-submit">Применить</button>
-                    <button class="catalog-filter-button-reset">Сбросить</button>
-                  </fieldset>
-                </div>
+                    <label><input type="number" name="min-price" min="0" max="9000" step="100"
+                      placeholder="от" value="0">от</label>
+                      <label><input type="number" name="max-price" min="0" max="9000" step="100"
+                        placeholder="до" value="0">до</label>
+                        <input type="range" name="slider" min="0" max="9000" value="0">
+                  </form>
+                    <button class="catalog-filter-button-submit" type="submit">Применить</button>
+                    <button class="catalog-filter-button-reset" type="reset">Сбросить</button>
             </form>
           </section>
 
