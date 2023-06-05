@@ -8,7 +8,7 @@
     <header class="page-header">
       <nav class="navigation">
         <a class="navigation-logo" href="">
-          <img src="#" alt="Логотип Седона" />
+          <img src="images/logo.svg" alt="Логотип Седона" width="140" height="70"/>
         </a>
         <ul class="navigation-list">
           <li class="navigation-item">
@@ -20,17 +20,18 @@
           <li class="navigation-item">
             <a class="navigation-link" href="#">Гостиницы</a>
           </li>
+          <!-- тут где-то надо вставить images/on-page под главную, но, как я понимаю, это нужно сделать в стилях -->
         </ul>
 
         <ul class="navigation-list navigation-user">
           <li class="search-navigation-item">
             <button class="navigation-button" href="#">
-              <span class="visually-hidden"> Поиск </span>
+              <img class="navigation-list-item" src="images/Vector.svg" alt="Поиск" width="18" height="18">
             </button>
           </li>
           <li class="favorites-navigation-item">
             <button class="navigation-button" href="#">
-              <span class="visually-hidden"> Избранное </span>
+              <img class="navigation-list-item" src="images/heart.svg" alt="Избранное" width="18" height="18">
             </button>
           </li>
           <li class="login-navigation-item">
@@ -47,10 +48,8 @@
       <section class="main-section">
         <h1 class="visually-hidden">Курорт Седона</h1>
         <section class="hero">
-          <img class="hero-image" src="#" alt="Фото пейзажа Седоны">
-          <img class="hero-image-item" src="#" alt="WELCOME to the gorgeous">
-          <img class="hero-image-item" src="#" alt="SEDONA">
-          <img class="hero-image-item" src="#" alt="&ldquo;Because the Grand Canyon sucks&bdquo;">
+          <img class="hero-main" src="images/hero-main-group.png" alt="Фото пейзажа седоны и приглашение на курорт."
+          width="1200" height="767">
         </section>
 
       <section class="advantages-section">
@@ -60,12 +59,13 @@
         <ul class="advantages-list">
           <li class="advantages-item">
             <h3 class="advantages-title">Настоящий городок</h3>
+            <!-- аналогичная ситуация, нужно вставить images/divider-advantages -->
             <p class="advantages-description">
               Седона — не аттракцион для туристов, там течёт своя жизнь
             </p>
             <img
               class="advantages-img"
-              src="#"
+              src="images/photo-advantages1.jpg"
               alt="Двухэтажные здания с флагами на фоне деревьев и гор"
             />
           </li>
@@ -87,10 +87,11 @@
               Большинство едет в Гранд Каньон и толпится там
             </p>
           </li>
+          <!-- между h3 и p так же повставлять дивайдеры -->
           <li class="advantages-item">
             <img
               class="advantages-img"
-              src="#"
+              src="images/photo-advantages2.jpg"
               alt="Большой каньон с деревьями."
             />
             <h3 class="advantages-title">Там есть мост дьявола</h3>
@@ -110,18 +111,21 @@
         </p>
         <ul class="service-list">
           <li class="service-item">
+            <img class="service-item-image" src="images/Advantage-icon-home.svg" alt="" width="75" height="72">
             <h3 class="service-title">Жильё</h3>
             <p class="service-description">
               Рекомендуем пожить в настоящем мотеле, всё как в кино!
             </p>
           </li>
           <li class="service-item">
+            <img class="service-item-image" src="images/Advantage-icon-food.svg" alt="" width="75" height="72">
             <h3 class="service-title">Еда</h3>
             <p class="service-description">
               Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!
             </p>
           </li>
           <li class="service-item">
+            <img class="service-item-image" src="images/Advantage-icon-souveniers.svg" alt="" width="75" height="72">
             <h3 class="service-title">Сувениры</h3>
             <p class="service-description">
               Не только китайского, но и настоящего местного производства!
@@ -139,6 +143,8 @@
         <button class="search-button">Поиск гостиниы в Седоне</button>
       </section>
 
+      <!-- как я понимаю, в рассылке тоже будет делаться в стилях через background-image
+        (почему-то в макете не смог достать бгшку) -->
       <section class="mailing-section">
         <h2 class="mailing-title">Подпишитесь на рассылку</h2>
         <p class="mailing-description">
@@ -165,12 +171,12 @@
           <ul class="footer-social-list">
             <li class="footer-social-item">
               <a class="button" href="https://vk.com/htmlacademy">
-                <span class="visually-hidden">Vkontakte</span>
+                <img class="footer-social-icon" src="images/Social-vk.svg" alt="Вконтакте" width="24" height="14">
               </a>
             </li>
             <li class="footer-social-item">
               <a class="button" href="https://t.me/htmlacademy">
-                <span class="visually-hidden">Telegram</span>
+                <img class="footer-social-icon" src="images/Social-tg.svg" alt="Телеграмм" width="18" height="16">
               </a>
             </li>
             <li class="footer-social-item">
@@ -178,7 +184,7 @@
                 class="button"
                 href="https://www.youtube.com/user/htmlacademyru"
               >
-                <span class="visually-hidden">Youtube</span>
+                <img class="footer-social-icon" src="images/Social-yt.svg" alt="Ютуб" width="22" height="17">
               </a>
             </li>
           </ul>
@@ -192,9 +198,9 @@
         </section>
 
         <section class="footer-copyright">
-          <a class="htmlacademy-link" href="https://htmlacademy.ru/"
-            ><img src="#" alt="Логотип HTML Academy"
-          /></a>
+          <a class="htmlacademy-link" href="https://htmlacademy.ru/">
+            <img src="images/Logo-htmlacad.svg" alt="Логотип HTML Academy" width="114.9" height="32.9"/>
+          </a>
         </section>
       </footer>
     </main>
