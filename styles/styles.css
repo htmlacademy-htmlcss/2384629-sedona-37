@@ -915,6 +915,9 @@ main,
   margin: 0;
   padding: 0;
   border: none;
+  display: flex;
+  flex-direction: column;
+
 }
 
 .filter-group:first-child {
@@ -944,10 +947,8 @@ main,
 }
 
 .filter-group-control {
-  position: relative;
   display: block;
   margin-bottom: 15px;
-  padding-left: 36px;
   font-size: 18px;
   line-height: 23px;
 }
@@ -969,38 +970,47 @@ main,
   opacity: 0.3;
 }
 
-.filter-group-control-mark {
-  position: absolute;
-  top: 2px;
-  left: 0;
+.filter-group-control-input:checked
+{
+  background-image: url("../images/icons/filter-checked.svg");
+  background-size: 100% 100%;
+  content: "";
+  appearance: none;
   width: 20px;
   height: 20px;
-  background-color: #ffffff;
+  background-color: transparent;
   border-radius: 4px;
 }
 
-.filter-group-control-input[type="checkbox"]:checked
-  + .filter-group-control-mark {
-  background-image: url("../images/icons/tick.svg");
-}
-
-.filter-group-control-input[type="radio"] + .filter-group-control-mark {
-  border-radius: 50%;
-}
-
-.filter-group-control-input[type="radio"]:checked /* TODO не успел :( */
-  + .filter-group-control-mark:before {
+  .filter-group-control-input:not(:checked)
+{
+  background-image: url("../images/icons/filter-unchecked.svg");
+  background-size: 100% 100%;
   content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 10px;
-  height: 10px;
-  background-color: #3f5e72;
-  border-radius: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border-radius: 4px;
+}
+
+.filter-group-control-input-radio:checked {
+  background-image: url("../images/icons/filter-radio-checked.svg");
+}
+
+.filter-group-control-input-radio:not(:checked) {
+  background-image: url("../images/icons/filter-radio-unchecked.svg");
+}
+
+.filter-group-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.filter-group-control-input {
+  margin: 0 16px 0 0;
 }
 
 .filter-price-slider-label {
@@ -1707,6 +1717,10 @@ a.modal-close:active {
   margin-top: 48px;
 }
 
+.button-modal:hover {
+  background-color: #82b3d3;
+}
+
 .modal-subtitle {
   font-size: 20px;
   font-weight: 700;
@@ -1854,24 +1868,48 @@ a.modal-close:active {
   left: 46%;
 }
 
-.popup-text { /* TODO не успел доделать :) */
-  position: absolute;
-  top: 100%;
-  left: 0;
-  transform: translate(-50%, 10px)
+.info-icon .popup-text {
   display: none;
+}
+
+.popup-text {
+  z-index: 2;
+  position: absolute;
+  top: 150%;
+  left: -108px;
+  align-items: center;
   padding: 10px;
-  background-image: url("../images/icons/popup-rectangle.svg");
+  border-color: #333333;
+  border-radius: 10px;
+  background-color: #333333;
+  /* background-image: url("../images/icons/popup-rectangle.svg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
   width: 256px;
-  height: 152px;
+  height: 143px;
   padding: 0;
-  font-size: 12px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: normal;
+  padding: 15px 18px 18px 22px;
+}
+
+.popup-img {
+  z-index: 2;
+  position: absolute;
+  top: -9px;
+  left: 112px;
+}
+
+p.popup-text-stylized {
+  width: 216px;
+  height: 110px;
+  margin: 0 auto;
 }
 
 .info-icon:hover .popup-text {
   display: block;
+  color: #ffffff;
 }
 
 .amount-registration-item b {

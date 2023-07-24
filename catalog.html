@@ -80,64 +80,77 @@
           >
             <fieldset class="filter-group">
               <legend class="filter-group-title">Инфраструктура:</legend>
-              <label class="filter-group-control">
+              <label class="filter-group-container">
                 <input
                   class="filter-group-control-input"
                   type="checkbox"
                   name="pool"
                   checked
                 />
-                Бассейн
+                <span class="filter-group-control">
+                  Бассейн
+                </span>
               </label>
-              <label class="filter-group-control">
-                <input
+              <label class="filter-group-container">
+              <input
                   class="filter-group-control-input"
                   type="checkbox"
                   name="parking"
                   checked
                 />
+              <span class="filter-group-control">
                 Парковка
-              </label>
-              <label class="filter-group-control">
-                <input
+              </span>
+            </label>
+              <label class="filter-group-container">
+              <input
                   class="filter-group-control-input"
                   type="checkbox"
                   name="wi-fi"
                 />
-                <!-- TODO PENIS-->
+              <span class="filter-group-control">
                 Wi-Fi
-              </label>
+              </span>
+            </label>
             </fieldset>
 
             <fieldset class="filter-group">
               <legend class="filter-group-title">Тип Жилья:</legend>
-              <label class="filter-group-control">
-                <input
-                  class="filter-group-control-input"
+              <label class="filter-group-container">
+              <input
+                  class="filter-group-control-input filter-group-control-input-radio"
                   type="radio"
                   name="housing"
                   value="hotels"
                   checked
                 />
+              <span class="filter-group-control">
                 Гостиница
+              </span>
               </label>
-              <label class="filter-group-control">
-                <input
-                  class="filter-group-control-input"
+              <label class="filter-group-container">
+              <input
+                  class="filter-group-control-input filter-group-control-input-radio"
                   type="radio"
                   name="housing"
-                  value="motels"
+                  value="hotels"
+                  checked
                 />
+              <span class="filter-group-control">
                 Мотель
-              </label>
-              <label class="filter-group-control">
-                <input
-                  class="filter-group-control-input"
+              </span>
+            </label>
+            <label class="filter-group-container">
+              <input
+                  class="filter-group-control-input filter-group-control-input-radio"
                   type="radio"
                   name="housing"
-                  value="apartments"
+                  value="hotels"
+                  checked
                 />
+              <span class="filter-group-control">
                 Апартаменты
+              </span>
               </label>
             </fieldset>
 
